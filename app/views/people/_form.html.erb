@@ -4,8 +4,10 @@
   <%= f.input :country, prompt: "Select Country" %>
   
   <% if @person.persisted? %>
-    <%= f.submit "Update", class: "btn btn-success" %>
+    <%= f.submit "Update", class: "btn btn-success",
+        data: { disable_with: "Updating..." } %>
   <% else %>
-    <%= f.submit "Create", class: "btn btn-success" %>
+    <%= f.submit " Add ", class: "btn btn-success",
+        data: { disable_with: "Adding..." } %>
   <% end %>
 <% end %>

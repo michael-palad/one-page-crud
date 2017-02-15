@@ -1,9 +1,8 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-10 col-sm-offset-1">
-      <%= link_to new_person_path, remote: true do %>
-        <button class="btn btn-primary">Add Person</button>
-      <% end %>
+      <%= link_to "Add Person", new_person_path, remote: true,
+        class: "btn btn-primary", data: { disable_with: "Add Person..." } %>
        
       <div id="person-form">
             
