@@ -1,0 +1,11 @@
+<%= simple_form_for @person, remote: true do |f| %>
+  <%= f.input :first_name %>
+  <%= f.input :last_name %>
+  <%= f.input :country, prompt: "Select Country" %>
+  
+  <% if @person.persisted? %>
+    <%= f.submit "Update", class: "btn btn-success" %>
+  <% else %>
+    <%= f.submit "Create", class: "btn btn-success" %>
+  <% end %>
+<% end %>
